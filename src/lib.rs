@@ -2,10 +2,12 @@ use std::fs;
 
 use crate::day01::Day1;
 use crate::day02::Day2;
+use crate::day03::Day3;
 use crate::day::Day;
 
 mod day01;
 mod day02;
+mod day03;
 mod input;
 
 pub mod day;
@@ -20,6 +22,7 @@ pub fn get_day(num: i8) -> Box<dyn Day> {
     return match num {
         1 => Box::from(Day1::new(input)),
         2 => Box::from(Day2::new(input)),
+        3 => Box::from(Day3::new(input)),
         _ => panic!("Unknown day: {}", num)
     };
 }
